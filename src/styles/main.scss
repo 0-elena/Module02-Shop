@@ -20,9 +20,8 @@ body{
 
 .header{
     max-width: 1440px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin: 0 auto;    
+    padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,9 +92,13 @@ body{
 }
 
 .main{
+    background-image: url(../images/main_back.png);
+    background-size: cover;
+    background-position-x: center;
     &__item{
         margin-left: 12rem;
         max-width: 378px;
+        margin-top: 6rem;
     }  
     &__link{
         margin-top: 6rem;
@@ -105,7 +108,8 @@ body{
 .title{
     font-family: $font-cormorant;
     font-weight: 700;
-    font-size: 8rem;    
+    font-size: 8rem;  
+    margin: 0;
     &__span{
         font-style: italic;
     }
@@ -119,6 +123,7 @@ body{
 .description{
     &_size-s{
         font-size: 1.8rem;
+        margin: 0;
     }
 }
 
@@ -126,10 +131,10 @@ body{
     color: $white;
     text-transform: uppercase;
     padding: 2.5rem 4.2rem;
-    border-color: $orange;
-    box-shadow: 0px 10rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
-    text-align: none;
-    border-radius: 3.2rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    border-radius: 3.8rem;
     display: inline-block;
 }
 
