@@ -268,7 +268,7 @@ body{
     background-position-x: center;
     background-repeat: no-repeat;
     padding-top: 2rem;
-    padding-bottom: 200px;
+    padding-bottom: 12.8rem;
     &__text{
         margin-top: 6rem;
         max-width: 700px;
@@ -282,35 +282,81 @@ body{
     overflow: initial;
     &-slide{
         border: 1px solid $green;
+        border-radius: 2rem;
+        padding: 4rem 3.7rem;
+        box-sizing: border-box;
         height: 520px;
         width: 468px;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         background-size: cover;
         background-position-x: center;
         background-repeat: no-repeat;
-        border-radius: 2rem;
+        position: relative;
+        z-index: 0;
+        &:hover{
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+            .swiper-slide__hover{
+                height: 233px;
+                opacity: 1;
+            }
+            &::after{
+                content: '';
+                background-color: rgba($white, .55);
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                border-radius: 2rem;
+                z-index: -1;
+            } 
+        }       
         &__title{
             font-family: $font-cormorant;
             font-size: 3rem;
             font-weight: bold;
             color: $green;
-            margin: 0 0 3.5rem 4rem;
+            margin-bottom: 0;
+        }
+        &__hover{
+            height: 0;
+            opacity: 0;
         }
         &__text{
             font-family: $font-jost;
             font-size: 1.6rem;
-            color: $green;
-            margin: 0 0 3.5rem 4.8rem;
+            color: rgba($green, .7);
+            line-height: 1.5; 
+            margin-top: 2.5rem;
+            max-width: 263px;
         }
         &__link{
             font-family: $font-jost;
             font-size: 1.6rem;
+            font-weight: 500;
             text-decoration: none;
             text-transform: uppercase;
-            margin: 0 0 3.5rem 4.8rem;
-            letter-spacing: 0.8px;
+            color: $green;
+            letter-spacing: 0.1rem;            
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            opacity: .8;
+            &:hover{
+                opacity: 1;
+            }
+            &::before{
+                content: '';
+                display: block;
+                background-image: url(../images/plus.svg);
+                width: 3rem;
+                height: 3rem;
+                background-size: cover;
+                background-repeat: no-repeat;
+                
+            }           
         }
         &_1{
             background-image: url(../images/milk.png);                        
@@ -326,17 +372,23 @@ body{
         display: none;
     }
     &-button-next, &-button-prev{
-        top: -50px;
-        
-        &::after{
-            color: $green;
-            
-            
+        top: -60px;
+        &:hover{
+            &::after{
+                color: rgba($green, 1);
+            }            
         }
+        &::after{
+            color: rgba($green, .4);
+            font-size: 20px;
+        }
+    }
+    &-button-next{
+        right: -8px;
     }
     &-button-prev{
         left: initial;
-        right: 100px;
+        right: 72px;
     }
 }
 
