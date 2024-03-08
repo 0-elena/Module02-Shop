@@ -392,6 +392,63 @@ body{
     }
 }
 
+.about{
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7rem;
+    }
+    &__text{
+        margin-left: 12rem;
+        flex-basis: 620px;
+    }
+    &__list{
+        list-style: none;
+        display: flex;
+        gap: 9rem;
+        font-family: $font-cormorant;
+        font-style: italic;
+        font-size: 3rem;
+        margin: 0;
+        padding-left: 0;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: '';
+            width: 84px;
+            height: 84px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: 1px solid rgba($green, .4);
+            border-radius: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1){
+            &::before{
+                background-image: url(../images/about-icon1.svg);
+                block-size: 44px 41px;
+            }
+        }
+        &:nth-child(2){
+            &::before{
+                background-image: url(../images/about-icon2.svg);
+                block-size: 40px 40px;
+            }
+        }
+        &:nth-child(3){
+            &::before{
+                background-image: url(../images/about-icon3.svg);
+                block-size: 45px 39px;
+            }
+        }
+    }
+}
+
 
     
 
