@@ -13,7 +13,6 @@ $r_minmob: 320px;
 $r_mob_360: 360px;
 $r_mob_400: 400px;
 $r_mob_500: 500px;
-$r_mob_600: 600px;
 $r_tab: 768px;
 $r_tab_900: 900px;
 $r_desk: 1000px;
@@ -28,6 +27,9 @@ $r_desk_full_1750: 1750px;
 
 html{
     font-size: 10px;
+    @media(max-width: $r_mob_500){
+        font-size: 8px;
+    }
 }
 
 body{
@@ -116,6 +118,11 @@ body{
             border: 1px solid $green;
             opacity: .8;
         }
+        @media(max-width: $r_mob_500){
+            width: 4.5rem;
+            height: 4.5rem;
+            background-size: 2rem; 
+        }
         &:hover{
             background-color: $green;
             border: 1px solid $green;
@@ -134,6 +141,9 @@ body{
         top: .6rem;
         @media(max-width: $r_desk_hd){
             color: $green;
+        }
+        @media(max-width: $r_mob_500){
+            font-size: 1rem; 
         }
     }
     &__phone, &__menu{
@@ -156,6 +166,11 @@ body{
             transition: .2s;
             opacity: .8;            
         }
+        @media(max-width: $r_mob_500){
+            width: 4.5rem;
+            height: 4.5rem; 
+            background-size: 1.9rem;
+        }
         &:hover{
             opacity: 1;
         }
@@ -177,6 +192,11 @@ body{
             transition: .2s;
             opacity: .8;    
         }
+        @media(max-width: $r_mob_500){
+            width: 4.5rem;
+            height: 4.5rem;
+            background-size: 2rem; 
+        }
     }
     &__buttons{
         @media(max-width: $r_desk_hd){
@@ -184,6 +204,9 @@ body{
             align-items: center;
             gap: 1.5rem;
 
+        }
+        @media(max-width: $r_mob_500){
+            gap: 1.4rem; 
         }
     }
 }
@@ -234,9 +257,12 @@ body{
         }
     }  
     &__link{
-        margin-top: 6rem;
+        margin-top: 5.3rem;
         @media(max-width: $r_tab){            
             text-align: center;            
+        }
+        @media(max-width: $r_mob_500){
+            margin-top: 3.3rem;
         }
     } 
     &__flex{
@@ -308,6 +334,9 @@ body{
             max-width: 300px;
             margin: 0 auto;
             margin-top: 3rem;            
+        }
+        @media(max-width: $r_mob_500){
+            max-width: 220px;
         }
     }
     &__text{
@@ -398,6 +427,13 @@ body{
         bottom: .1rem;
         right: 13rem;
         width: 11rem;
+        z-index: -1;
+        @media(max-width: $r_mob_500){
+            bottom: initial;  
+            top: 82px; 
+            right: inherit; 
+            left: -14px;       
+        }
     }
     &__beans{
         position: absolute;
@@ -405,13 +441,26 @@ body{
         left: 0;
         width: 10.5rem;
         height: 11.5rem;
+        z-index: -1;
+        @media(max-width: $r_mob_500){
+            display: none;            
+        }
     }
     &__cucumber{ 
         position: absolute;
         top: 0;
         left: 70rem;
         width: 8.5rem;
-        height: 4.1rem;       
+        height: 4.1rem;
+        z-index: -1;
+        @media(max-width: $r_mob_500){
+            transform: rotate(90deg);
+            width: 6.5rem;
+            top: inherit;
+            left: inherit;
+            right: -15px; 
+            bottom: 216px;      
+        }       
     }
     &__papper{ 
         position: absolute;
@@ -422,7 +471,13 @@ body{
         z-index: -2;
         @media(max-width: $r_desk_full_1750){
             display: none;
-        }     
+        } 
+        @media(max-width: $r_mob_500){
+            display: block;
+            top: 352px;
+            left: -4px;
+            width: 4.6rem;            
+        }    
     }
     &__avocado{ 
         position: absolute;
@@ -436,7 +491,11 @@ body{
             height: 10.1rem;
             top: 120px;
             right: -50px;
-        }      
+        }
+        @media(max-width: $r_mob_500){
+            top: 88px;            
+            right: -38px;      
+        }             
     }
 
 }
@@ -518,6 +577,9 @@ body{
     background-repeat: no-repeat;
     padding-top: 2rem;
     padding-bottom: 12.8rem;
+    @media(max-width: $r_tab){
+        padding-bottom: 4rem;
+    }
     &__text{
         margin-top: 6rem;
         max-width: 700px;
@@ -532,6 +594,10 @@ body{
         margin: 0 auto;
         padding-top: 5.4rem;
         padding-bottom: 6rem;
+    }
+    @media(max-width: $r_mob_500){
+        max-width: 210px;  
+        padding-bottom: 7rem;                    
     }
 }
 .swiper{
@@ -554,6 +620,11 @@ body{
             background-size: contain;
             @media(max-width: $r_desk_hd){
                 height: 400px;                
+            }
+            @media(max-width: $r_mob_500){
+                height: 240px; 
+                text-align: center;
+                padding: 2.2rem 1.7rem;                     
             }
             
             &:hover{
@@ -580,6 +651,9 @@ body{
             .swiper-slide__hover{
                 height: 233px;
                 opacity: 1;
+                @media(max-width: $r_mob_500){
+                    height: auto;                                         
+                }
             }
             &::after{
                 content: '';
@@ -599,10 +673,19 @@ body{
             font-weight: bold;
             color: $green;
             margin-bottom: 0;
+            @media(max-width: $r_mob_500){
+                font-size: 1.75rem; 
+                margin-top: 0;  
+                margin-bottom: 2rem;                   
+            }
         }
         &__hover{
             height: 0;
             opacity: 0;
+            @media(max-width: $r_mob_500){
+                height: auto;  
+                opacity: 1;                    
+            }
         }
         &__text{
             font-family: $font-jost;
@@ -611,6 +694,9 @@ body{
             line-height: 1.5; 
             margin-top: 2.5rem;
             max-width: 263px;
+            @media(max-width: $r_mob_500){
+                display: none;                    
+            }
         }
         &__link{
             font-family: $font-jost;
@@ -624,6 +710,11 @@ body{
             align-items: center;
             gap: 2rem;
             opacity: .8;
+            @media(max-width: $r_mob_500){
+                font-size: 1.25rem; 
+                justify-content: center;
+                gap: 9px;                                        
+            }
             &:hover{
                 opacity: 1;
             }
@@ -635,6 +726,10 @@ body{
                 height: 3rem;
                 background-size: cover;
                 background-repeat: no-repeat;
+                @media(max-width: $r_mob_500){
+                    width: 2.5rem;
+                    height: 2.5rem;                                         
+                }
                 
             }           
         }
@@ -825,10 +920,23 @@ body{
     }
 }
 .trends{
-    margin-bottom: 20rem;    
+    margin-bottom: 20rem;
+    &__text{
+        margin-top: 4rem;
+    }    
 }
 .catalog{
-    margin-bottom: 160px;
+    margin-bottom: 16rem;
+    @media(max-width: $r_tab){
+        margin-bottom: 8rem;
+    }
+    &__list{
+        margin-top: 8.5rem;
+        margin-bottom: 5rem;
+        @media(max-width: $r_tab){
+            margin-top: 5rem;
+        }
+    }
     &__title{
         margin-bottom: 6rem;
     }
@@ -893,16 +1001,29 @@ body{
 }
 .catalog-grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    gap: 20px;  
-    margin-bottom: 60px;     
+    grid-template-columns: repeat(4, 1fr);    
+    gap: 20px;      
+    margin-bottom: 60px;
+    @media (max-width: $r_desk_1280) {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    @media (max-width: $r_desk) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $r_tab) {
+        gap: 10px;
+        margin-bottom: 30px;
+    }   
     &__item{
         border: 1px solid rgba($green, .4);
         border-radius: 2rem;
         padding: 2.7rem 3rem 3.8rem;
+        box-sizing: border-box;        
         &:hover{
             box-shadow: 0 0 0 2px rgba($green, .4);
+        }
+        @media(max-width: $r_tab){
+            padding: 2.2 rem 2rem 2.8rem;            
         }
     }
     
@@ -912,6 +1033,9 @@ body{
         width: 100%;
         height: 204px;
         text-align: center;
+        @media(max-width: $r_tab){
+            height: 150px;
+        }
     }
     &__image{
         width: 100%;
@@ -925,6 +1049,9 @@ body{
         color: $green;
         margin-top: 1.7rem;
         margin-bottom: 0;
+        @media(max-width: $r_tab){
+            font-size: 2rem;
+        }
     }
     &__description{
         font-size: 1.6rem;
@@ -934,11 +1061,17 @@ body{
         min-height: 61px;
         min-width: 300px;
         line-height: 1.5;
+        @media(max-width: $r_tab){
+            font-size: 1.3rem;
+        }
     }
     &__price{
         font-size: 2.4rem;
         margin-bottom: 3rem;
         margin-top: 0;
+        @media(max-width: $r_tab){
+            font-size: 2rem;
+        }
     }
     &__footer{
         display: flex;
@@ -1015,10 +1148,19 @@ body{
 }
 .contact{
     margin-bottom: 16rem;
+    @media(max-width: $r_tab){
+        margin-bottom: 8rem;
+    } 
     &-box{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media(max-width: $r_desk_hd){
+            gap: 10%;
+        }
+        @media(max-width: $r_desk){
+            gap: 5%;
+        }        
         &__text{
             max-width: 400px;
             flex-grow: 1;
