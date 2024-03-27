@@ -566,8 +566,7 @@ body{
     &_min{
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
-        box-shadow: 0px 1rem 1.1rem .17 rgba(207, 92, 13, 0.15);
-                
+        box-shadow: 0px 1rem 1.1rem .17 rgba(207, 92, 13, 0.15);                
     }
 }
 .offer{
@@ -852,7 +851,7 @@ body{
         border: none;
         padding: 0;
         &_min{
-            width: 33%;
+            width: 33px;
         }
     }
 }
@@ -1059,7 +1058,7 @@ body{
         margin-top: 1.8rem;
         margin-bottom: 0;
         min-height: 61px;
-        min-width: 300px;
+        max-width: 300px;
         line-height: 1.5;
         @media(max-width: $r_tab){
             font-size: 1.3rem;
